@@ -12,6 +12,7 @@ const Language_box = ({language, content, setLanguage, setContent},...props) => 
   return (
     <Draggable
         bounds='parent'
+        // handle={`.${styles.input_field} .${styles.title}`}
     >
         <div className={styles.container}>
             <div className={styles.title}>Input Box</div>

@@ -6,7 +6,8 @@ body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
     font-size: 25px;
-    background-image: linear-gradient(to left top, #c87ba6, #bb71ab, #a969b1, #9263b8, #725fbe, #5b68c5, #3e70ca, #0077cc, #0087cb, #0093bf, #009dad, #06a49a);
+    background-color: blue;
+    background-image: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgb(18, 131, 207) 0%, rgb(6, 25, 164) 90% );
 
     color: white;
 }

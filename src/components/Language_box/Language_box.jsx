@@ -16,7 +16,6 @@ const Language_box = ({langFrom, fromContent, Delete},...props) => {
     }
 
     useEffect(() => {
-        console.log(Delete)
         fetch(`https://lingva.ml/api/v1/${langFrom}/${language}/${fromContent}`)
         .then(res => res.json())
         .then(data => {
@@ -31,7 +30,9 @@ const Language_box = ({langFrom, fromContent, Delete},...props) => {
     ];
 
   return (
-    <Draggable bounds="parent">
+    <Draggable bounds="parent" 
+    // handle={`.${styles.input_field}`}
+    >
         <div className={styles.container}>
             <div className={styles.input_field}>
                 <label htmlFor='language'>Language</label>
@@ -40,7 +41,7 @@ const Language_box = ({langFrom, fromContent, Delete},...props) => {
                         langOpt.map((lang,index) => <option key={index} value={lang["code"]}>{lang["name"]}</option>)
                     }
                 </select>
-                <button onClick={Delete}>Delete</button>
+                <button className={styles.button} onClick={Delete}>Delete</button>
             </div>
             <Input_box content={content} setContent={setContent}/>
         </div>

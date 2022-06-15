@@ -10,18 +10,17 @@
     align-items: center;
     flex-direction: column;
 
-    border: solid 2px rgb(0, 21, 128);
+    /* border: solid 2px rgb(226, 231, 255); */
     border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.296);
+    /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(162,102,246,1) 0%, rgb(49, 39, 94) 90% ); */
 
     transition: box-shadow 150ms ease-in-out;
     /* font-size: .8rem; */
 }
 
 .container:hover{
-    box-shadow: 0px 2px 4px 0px rgb(78, 78, 78);
-}
-.container:hover .input{
-    box-shadow: 0px 2px 4px 0px rgb(78, 78, 78);
+    box-shadow: 0px 2px 4px 0px rgb(78, 78, 78),0px 2px 4px 0px rgb(29, 29, 29);
 }
 
 .input_field{
@@ -32,29 +31,34 @@
     justify-content: space-around;
     align-items: baseline;
 }
-
+.input_field>select{
+    padding: 0.1rem 0.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    border-bottom: solid 1px white;
+}
+.input_field>select>option{
+    color: black;
+}
 .input{
     width: 300px;
     height: 200px;
     padding: 1rem;
 
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 0.1rem;
+    outline: none;
 
-    background: rgb(63,85,125);
-    background: -moz-radial-gradient(circle, rgba(63,85,125,1) 11%, rgba(56,56,96,1) 52%, rgba(41,39,87,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(63,85,125,1) 11%, rgba(56,56,96,1) 52%, rgba(41,39,87,1) 100%);
-    background: radial-gradient(circle, rgba(63,85,125,1) 11%, rgba(56,56,96,1) 52%, rgba(41,39,87,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f557d",endColorstr="#292757",GradientType=1);
+    /* border: solid 1px white; */
+    background: rgba(38, 38, 43, 0.63);
+    
 
     color: white;
     resize: none;
 }
 
-.input:read-only{
-    background: rgb(80,96,99);
-    background: -moz-radial-gradient(circle, rgba(80,96,99,1) 11%, rgba(55,55,60,1) 95%, rgba(45,45,45,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(80,96,99,1) 11%, rgba(55,55,60,1) 95%, rgba(45,45,45,1) 100%);
-    background: radial-gradient(circle, rgba(80,96,99,1) 11%, rgba(55,55,60,1) 95%, rgba(45,45,45,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#506063",endColorstr="#2d2d2d",GradientType=1);
+.button{
+
 }

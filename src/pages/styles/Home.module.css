@@ -19,7 +19,7 @@
     height: 90%;
 
     z-index: 1;
-    border: solid 1px red;
+    /* border: solid 1px red; */
 }
 .Boxes>div{
     backdrop-filter: blur(10px);
