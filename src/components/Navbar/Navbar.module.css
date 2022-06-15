@@ -7,12 +7,12 @@
     align-items: center;
 }
 .title{
-    text-shadow: 2px 2px 9px rgb(80, 80, 80);
+    text-shadow: 2px 2px 9px rgb(80, 80, 80),  2px 2px 9px rgb(40, 40, 40);
     transition: 150ms ease-in-out;
 }
 .title:hover{
     
-    text-shadow: 2px 2px 9px rgb(80, 80, 80), 2px 2px 9px black;
+    text-shadow: 2px 2px 9px rgb(80, 80, 80),  2px 2px 9px rgb(40, 40, 40), 2px 2px 9px black;
     animation: jiggle 150ms ease-in-out;
 }
 @keyframes jiggle {

@@ -6,10 +6,27 @@ body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
     font-size: 25px;
-    background-color: blue;
-    background-image: radial-gradient( circle farthest-corner at 7.2% 13.6%,  rgb(18, 131, 207) 0%, rgb(6, 25, 164) 90% );
-
+    background: rgb(53,17,79);
+    /* background: -moz-linear-gradient(146deg, rgba(53,17,79,1) 4%, rgba(163,30,77,1) 50%, rgba(175, 4, 32) 100%);
+    background: -webkit-linear-gradient(146deg, rgba(53,17,79,1) 4%, rgba(163,30,77,1) 50%, rgba(175, 4, 32) 100%); */
+    background: linear-gradient(146deg, rgba(53,17,79,1) 10%, rgb(124, 13, 52) 50%, rgb(143, 8, 8) 96%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35114f",endColorstr="#db0328",GradientType=1);
+    background-size: 200% 200%;
     color: white;
+
+    animation: bg 10s infinite   ease-in-out;
+}
+
+@keyframes bg {
+    0%, 100%{
+        background-position: 0% 0%;
+    }
+    40%{
+        background-position: 100% 0%;
+    }
+    60%{
+        background-position: 0% 100%;
+    }
 }
 
 * {

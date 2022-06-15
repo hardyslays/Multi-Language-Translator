@@ -41,7 +41,12 @@ const Language_box = ({langFrom, fromContent, Delete},...props) => {
                         langOpt.map((lang,index) => <option key={index} value={lang["code"]}>{lang["name"]}</option>)
                     }
                 </select>
-                <button className={styles.button} onClick={Delete}>Delete</button>
+                <button className={styles.button} onClick={Delete}>
+                <svg viewBox="0 0 100 100" width="100%" height="100%">
+                    <line style={{ 'stroke-linecap': 'round', 'stroke-width': '10px', 'stroke': 'rgb(256, 256, 256)'}} x1="25" y1="25" x2="75" y2="75"></line>
+                    <line style={{ 'stroke-linecap': 'round', 'stroke-width': '10px', 'stroke': 'rgb(256, 256, 256)'}} x1="25" y1="75" x2="75" y2="25"></line>
+                </svg>
+                </button>
             </div>
             <Input_box content={content} setContent={setContent}/>
         </div>
