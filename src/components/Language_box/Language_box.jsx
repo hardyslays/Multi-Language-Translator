@@ -3,14 +3,15 @@ import Input_box from './Input_box'
 import styles from './component.module.css'
 import Draggable from 'react-draggable'
 
-const Language_box = ({langFrom, fromContent, Delete},...props) => {
+const Language_box = ({id, langFrom, fromContent, zind, Delete, change},...props) => {
     const [language, setLanguage] = useState('en')
     const [content,setContent] = useState('Hello there good sir')
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         fetch(`https://lingva.ml/api/v1/${langFrom}/${language}/${fromContent}`)
-        .then(res => res.json())
+        .then(res => res.json())    
         .then(data => setContent(data.translation))
         .catch(err => console.log(err)) 
     }
@@ -33,22 +34,23 @@ const Language_box = ({langFrom, fromContent, Delete},...props) => {
     <Draggable bounds="parent" 
     // handle={`.${styles.input_field}`}
     >
-        <div className={styles.container}>
+        <div className={styles.container} z={zind} onMouseDownCapture={change} onTouchStart={change}>
             <div className={styles.input_field}>
-                <label htmlFor='language'>Language</label>
-                <select id='language' value={language} onChange={(e)=>setLanguage(e.target.value)}>
+                <label htmlFor={id}>Language</label>
+                <select id={id} onTouch={e => e.target.focus} onChange={(e)=>setLanguage(e.target.value)}>
                     {
                         langOpt.map((lang,index) => <option key={index} value={lang["code"]}>{lang["name"]}</option>)
                     }
                 </select>
-                <button className={styles.button} onClick={Delete}>
+                <button className={styles.button} onClick={Delete} onTouchStart={Delete}>
                 <svg viewBox="0 0 100 100" width="100%" height="100%">
-                    <line style={{ 'stroke-linecap': 'round', 'stroke-width': '10px', 'stroke': 'rgb(256, 256, 256)'}} x1="25" y1="25" x2="75" y2="75"></line>
-                    <line style={{ 'stroke-linecap': 'round', 'stroke-width': '10px', 'stroke': 'rgb(256, 256, 256)'}} x1="25" y1="75" x2="75" y2="25"></line>
+                    <line style={{ 'strokeLinecap': 'round', 'strokeWidth': '10px', 'stroke': 'rgb(256, 256, 256)'}} x1="25" y1="25" x2="75" y2="75"></line>
+                    <line style={{ 'strokeLinecap': 'round', 'strokeWidth': '10px', 'stroke': 'rgb(256, 256, 256)'}} x1="25" y1="75" x2="75" y2="25"></line>
                 </svg>
                 </button>
             </div>
             <Input_box content={content} setContent={setContent}/>
+            
         </div>
     </Draggable>
   )

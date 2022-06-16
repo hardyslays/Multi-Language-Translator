@@ -16,11 +16,18 @@
 
     /* border: solid 2px rgb(226, 231, 255); */
     border-radius: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.296);
+    background-color: rgba(255, 255, 255, 0.125);
     /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(162,102,246,1) 0%, rgb(49, 39, 94) 90% ); */
 
     transition: box-shadow 150ms ease-in-out;
     /* font-size: .8rem; */
+
+}
+.container[z=zero]{
+    z-index: 1;
+}
+.container[z=one]{
+    z-index: 10;
 }
 
 .container:hover{

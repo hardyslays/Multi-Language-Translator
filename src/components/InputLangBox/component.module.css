@@ -4,7 +4,7 @@
     left: 5%;
 
     width: 350px;
-    height: 300px;
+    height: 280px;
 
     display: flex;
     justify-content: space-between;
@@ -17,12 +17,12 @@
 
     transition: box-shadow 150ms ease-in-out;
 
-    padding: 1rem;
+    padding: 0.5rem 0;
+    z-index: 1000;
 }
 .title{
     font-weight: bolder;
-    margin-top: -.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: -.3rem;
 }
 
 .container:hover{
@@ -32,13 +32,13 @@
 .input_field{
     font-size: 0.8rem;
     width: 100%;
-    padding: 0.1rem;
+    padding-bottom: 0.15rem;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
 }
 .input_field>select{
-    padding: 0.1rem 0.5rem;
+    padding: 0 0.5rem;
     background: transparent;
     border: none;
     color: white;
@@ -55,10 +55,33 @@
     padding: 1rem;
 
     border: none;
-    border-radius: 0.3rem;
+    border-radius: 0.1rem;
     
     background-color: rgba(255, 255, 255, 0.296);
 
     color: white;
     resize: none;
+    cursor: pointer;
+}
+
+.btn{
+    margin-top: .3rem;
+    /* margin-bottom: -5px; */
+    padding: .2rem .4rem;
+
+    font-size: 0.6rem;
+    /* font-weight: bolder; */
+
+    background: transparent;
+    color: white;
+
+    border: solid 1px white;
+    /* border-radius: 2px; */
+    transform: skewX(-10deg);
+    transition: 50ms ease-out;
+}
+
+.btn:hover{
+    transform: skewX(-10deg) translate(-1px, -1px);
+    box-shadow: 4px 4px grey;
 }
